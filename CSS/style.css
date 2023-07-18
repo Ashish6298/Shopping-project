@@ -193,6 +193,7 @@ nav .navbar-top {
     text-align: center;
     animation: fade 1s;
     font-family: 'Times New Roman';
+    
 }
 
 .producstOnCart::-webkit-scrollbar {

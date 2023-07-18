@@ -36,7 +36,6 @@ const updateShoppingCartHTML = function () {  // 3
 		parentElement.innerHTML = result.join('');
 		document.querySelector('.checkout').classList.remove('hidden');
 		cartSumPrice.innerHTML = '₹' + countTheSumPrice();
-
 	}
 	else {
 		document.querySelector('.checkout').classList.add('hidden');
@@ -45,7 +44,7 @@ const updateShoppingCartHTML = function () {  // 3
 	}
 }
 
-function updateProductsInCart(product) { // 2
+function updateProductsInCart(product) { 
 	for (let i = 0; i < productsInCart.length; i++) {
 		if (productsInCart[i].id == product.id) {
 			productsInCart[i].count += 1;
@@ -56,7 +55,7 @@ function updateProductsInCart(product) { // 2
 	productsInCart.push(product);
 }
 
-products.forEach(item => {   // 1
+products.forEach(item => {   
 	item.addEventListener('click', (e) => {
 		if (e.target.classList.contains('addToCart')) {
 			const productID = e.target.dataset.productId;
@@ -77,7 +76,7 @@ products.forEach(item => {   // 1
 	});
 });
 
-parentElement.addEventListener('click', (e) => { // Last
+parentElement.addEventListener('click', (e) => { 
 	const isPlusButton = e.target.classList.contains('button-plus');
 	const isMinusButton = e.target.classList.contains('button-minus');
 	if (isPlusButton || isMinusButton) {
